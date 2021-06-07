@@ -14,6 +14,9 @@
 - create:
     - ~/workspace
 
-#- shell:
+- shell:
 #  - [git submodule update --init --recursive, Installing submodules]
-
+   - 
+     command: ./pkg/linux/install_packages.zsh
+     stdout: true
+     stderr: true
