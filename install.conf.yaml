@@ -5,17 +5,24 @@
 - clean: ['~']
 
 - link:
+    ~/.shell:
+    ~/.bin:
+    ~/.tmux:
+    ~/.vim:
+    ~/.zsh: 
     ~/.gitconfig:
     ~/.tmux.conf:
-    ~/.vim:
     ~/.vimrc:
     ~/.zshrc:
+    ~/.config/starship.toml:
 
 - create:
+    - ~/.cache/zsh
     - ~/workspace
+    
 
 - shell:
-#  - [git submodule update --init --recursive, Installing submodules]
+   - [git submodule update --init --recursive, Installing submodules]
    - 
      command: ./pkg/linux/install_packages.zsh
      stdout: true

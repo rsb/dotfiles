@@ -1,13 +1,30 @@
-# Aliases
-alias ll='ls -lAFh'
+source ~/.shell/functions.zsh
 
-# Prompt
-PROMPT='
-%1~ %L %# '
+if [ -f ~/.shell_local_before ]; then
+  source ~/.shell_local_before
+fi
 
-RPROMPT='%*'
+if [ -f ~/.zshrc_local_before ]; then
+  source ~/.zshrc_local_before
+fi
 
 
-function mkcd() {
-  mkdir -p "$@" && c "$_";
-}
+source ~/.zsh/plugins_before.zsh
+source ~/.zsh/settings.zsh
+
+
+source ~/.shell/bootstrap.zsh
+source ~/.shell/external.zsh
+source ~/.shell/aliases.zsh
+
+source ~/.zsh/prompt.zsh
+
+source ~/.zsh/plugins_after.zsh
+
+if [ -f ~/.shell_local_after ]; then
+  source ~/.shell_local_after
+fi
+
+if [ -f ~/.zshrc_local_after ]; then
+  source ~/.zshrc_local_after
+fi
