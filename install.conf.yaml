@@ -10,6 +10,8 @@
     - ~/.config/nvim/lua
     - ~/.config/nvim/plugin
     - ~/.config/nvim/after/plugin
+    - ~/workspace/fender
+    - ~/workspace/rsb
     - ~/workspace/go/pkg
     - ~/workspace/go/bin
     - ~/workspace/go/src
