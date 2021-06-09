@@ -4,26 +4,37 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.vim
+    - ~/.cache/zsh
+    - ~/.config/nvim/lua
+    - ~/.config/nvim/plugin
+    - ~/.config/nvim/after/plugin
+    - ~/workspace/go/pkg
+    - ~/workspace/go/bin
+    - ~/workspace/go/src
+
 - link:
     ~/.shell:
     ~/.bin:
     ~/.tmux:
-    ~/.vim:
-    ~/.zsh: 
+    ~/.zsh:
     ~/.gitconfig:
     ~/.tmux.conf:
-    ~/.vimrc:
+    ~/.config/nvim/lua/rsb: config/nvim/lua/rsb
+    ~/.config/nvim/plugin/sets.vim: config/nvim/plugin/sets.vim
+    ~/.config/nvim/plugin/telescope.vim: config/nvim/plugin/telescope.vim
+    ~/.config/nvim/init.vim: init.vim
     ~/.zshrc:
     ~/.config/starship.toml:
 
-- create:
-    - ~/.cache/zsh
-    - ~/workspace
-    
-
 - shell:
-   - [git submodule update --init --recursive, Installing submodules]
-   - 
-     command: ./pkg/linux/install_packages.zsh
-     stdout: true
-     stderr: true
+  - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: ./pkg/linux/install_packages.zsh
+    stdout: true
+    stderr: true
+  -
+    command: ./pkg/linux/install_golang.zsh
+    stdout: true
+    stderr: true

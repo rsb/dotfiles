@@ -1,5 +1,10 @@
+
+if [ -d "${ASDF_DIR}/completions" ]; then
+  fpath=(${ASDF_DIR}/completions $fpath)
+fi
+
 # Basic auto/tab complete:
-autoload -U compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
 setopt globdots
@@ -17,7 +22,7 @@ export KEYTIMEOUT=1
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history 
+bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 zle -N zle-keymap-select
