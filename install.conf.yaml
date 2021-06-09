@@ -6,6 +6,7 @@
 
 - create:
     - ~/.vim
+    - ~/.tmux/colors
     - ~/.cache/zsh
     - ~/.config/nvim/lua
     - ~/.config/nvim/plugin
@@ -19,10 +20,10 @@
 - link:
     ~/.shell:
     ~/.bin:
-    ~/.tmux:
     ~/.zsh:
     ~/.gitconfig:
     ~/.tmux.conf:
+    ~/.tmux/colors/tmux-gruvbox-dark.conf: tmux/colors/tmux-gruvbox-dark.conf
     ~/.config/nvim/lua/rsb: config/nvim/lua/rsb
     ~/.config/nvim/plugin/sets.vim: config/nvim/plugin/sets.vim
     ~/.config/nvim/plugin/telescope.vim: config/nvim/plugin/telescope.vim
