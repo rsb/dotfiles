@@ -10,6 +10,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-projectionist'
 
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'preservim/nerdtree'
+
   " telescope requirements...
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'

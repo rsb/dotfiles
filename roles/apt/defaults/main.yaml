@@ -1,0 +1,32 @@
+package_upgrade: yes
+packages:
+  - ansible
+  - build-essential
+  - curl
+  - docker-compose
+  - docker.io
+  - htop
+  - fzf
+  - jq
+  - libbz2-dev
+  - libffi-dev
+  - libffi-dev
+  - liblzma-dev
+  - liblzma-dev
+  - libncurses5-dev
+  - libreadline-dev
+  - libsqlite3-dev
+  - libssl-dev
+  - llvm
+  - make
+  - tk-dev
+  - wget
+  - xz-utils
+  - zlib1g-dev
+  - ripgrep
+
+  # GUI
+
+
+remove_packages:
+  - gnome-shell-extension-ubuntu-dock
