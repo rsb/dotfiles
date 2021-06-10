@@ -3,4 +3,4 @@ dotfiles_home: "{{ dotfiles_user_home }}/.dotfiles"
 
 full_name: Robert Scott-Buccleuch
 git_user: rsb
-git_email: rsb.code@gmail.com
+git_email: 60840+rsb@users.noreply.github.com
