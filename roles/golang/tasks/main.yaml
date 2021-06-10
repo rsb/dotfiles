@@ -1,0 +1,23 @@
+- name: Create Golang directory {{ go_root }}
+  file:
+    path: /usr/local/go
+    owner: root
+    group: root
+    state: directory
+  become: yes
+  become_user: root
+  become_method: sudo
+
+- name: Download Golang {{version}} and install
+  ansible.builtin.unarchive:
+    src: "https://golang.org/dl/go{{version}}.linux-amd64.tar.gz"
+    dest: /usr/local/go
+    remote_src: yes
+    mode: 0755
+    group: root
+    owner: root
+    extra_opts: [--strip-components=1]
+  become: yes
+  become_user: root
+  become_method: sudo
+
