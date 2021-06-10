@@ -7,3 +7,6 @@
     - role: git
       tags:
         - git
+    - role: tmux
+      tags:
+        - tmux

@@ -1,0 +1,19 @@
+- import_tasks: debian.yaml
+  when: ansible_os_family == "Debian"
+
+- name: Install tpm
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: "{{dotfiles_user_home}}/.tmux/plugins/tpm"
+
+- name: Symlink .tmux.conf
+  file:
+    src: "{{ dotfiles_home }}/roles/tmux/files/tmux.conf"
+    dest: "{{dotfiles_user_home}}/.tmux.conf"
+    state: link
+
+- name: Symlink tmux-gruvbox-dark.conf
+  file:
+    src: "{{ dotfiles_home }}/roles/tmux/files/tmux.conf"
+    dest: "{{dotfiles_user_home}}/.tmux/colors/tmux-gruvbox-dark.conf"
+    state: link

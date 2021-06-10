@@ -1,0 +1,5 @@
+- name: Install tmux with apt
+  apt: name=tmux state=present
+  become: true
+  become_user: root
+  become_method: sudo
