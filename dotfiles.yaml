@@ -16,3 +16,9 @@
     - role: golang
       tags:
         - golang
+    - role: python
+      tags:
+        - python
+    - role: node
+      tags:
+        - node

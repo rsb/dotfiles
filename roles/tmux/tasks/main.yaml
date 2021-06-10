@@ -12,8 +12,8 @@
     dest: "{{dotfiles_user_home}}/.tmux.conf"
     state: link
 
-- name: Symlink tmux-gruvbox-dark.conf
+- name: Symlink colors
   file:
-    src: "{{ dotfiles_home }}/roles/tmux/files/tmux.conf"
+    src: "{{ dotfiles_home }}/roles/tmux/files/tmux-gruvbox-dark.conf"
     dest: "{{dotfiles_user_home}}/.tmux/colors/tmux-gruvbox-dark.conf"
     state: link

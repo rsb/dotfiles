@@ -1,3 +1,13 @@
+- name: Check if Golang Root Directory exists
+  stat:
+    path: "/usr/local/go"
+  register: golang_root_dir
+
+- name: Check if Golang {{version}} is installed
+  command: /usr/local/go/bin/go version
+  register: golang_check_version
+  when: golang_root_dir.stat.exists
+
 - name: Create Golang directory {{ go_root }}
   file:
     path: /usr/local/go
@@ -7,6 +17,7 @@
   become: yes
   become_user: root
   become_method: sudo
+  when: golang_root_dir.stat.exists == false
 
 - name: Download Golang {{version}} and install
   ansible.builtin.unarchive:
@@ -20,4 +31,5 @@
   become: yes
   become_user: root
   become_method: sudo
-
+  when: (golang_root_dir.stat.exists == false) or
+        (golang_check_version.stdout.find("go version go1.16.5 linux/amd64") == -1)
