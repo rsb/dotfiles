@@ -1,0 +1,17 @@
+- name: Check if Terraform Root Directory exists
+  stat:
+    path: "/usr/local/bin/terraform"
+  register: terraform_cmd
+
+- name: Downlad Terraform {{version}} and install
+  ansible.builtin.unarchive:
+    src: "https://releases.hashicorp.com/terraform/{{version}}/terraform_{{version}}_linux_amd64.zip"
+    dest: /usr/local/bin/
+    remote_src: yes
+    mode: 0755
+    group: root
+    owner: root
+  become: yes
+  become_user: root
+  become_method: sudo
+  when: terraform_cmd.stat.exists == false
