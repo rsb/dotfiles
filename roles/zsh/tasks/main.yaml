@@ -34,6 +34,12 @@
     dest: "~/.config/starship.toml"
     state: link
 
+- name: Link .zsh
+  file:
+    src: "{{dotfiles_home}}/roles/zsh/files/zsh"
+    dest: "~/.zsh"
+    state: link
+
 - name: Link zshrc
   file:
     src: "{{dotfiles_home}}/roles/zsh/files/zshrc"
