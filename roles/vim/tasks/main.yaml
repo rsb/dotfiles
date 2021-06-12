@@ -1,0 +1,97 @@
+- name: Check the existance of NeoVim
+  stat:
+    path: "/usr/local/bin/nvim"
+  register: nvim_check
+
+- name: Download NeoVim to tmp
+  get_url:
+    url: https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+    dest: /tmp/nvim.appimage
+  when:  nvim_check.stat.exists == false
+
+- name: Copy and rename /tmp/nvim/nvim.appimage -> /usr/local/bin/nvim
+  copy:
+    src: /tmp/nvim.appimage
+    dest: /usr/local/bin/nvim
+    remote_src: no
+    owner: root
+    group: root
+    mode: 0755
+  become: yes
+  become_user: root
+  become_method: sudo
+  when:  nvim_check.stat.exists == false
+
+- name: Cleanup downloaded file
+  file:
+    path: /tmp/nvim.appimage
+    state: absent
+  when:  nvim_check.stat.exists == false
+
+
+- name: NeoVim plugin directory
+  file:
+    path: "~/.config/nvim/plugin"
+    state: directory
+    recurse: yes
+    mode: 0755
+
+- name: NeoVim lua directory
+  file:
+    path: "~/.config/nvim/lua"
+    state: directory
+    recurse: yes
+    mode: 0755
+
+
+- name: NeoVim after/plugin directory
+  file:
+    path: "~/.config/nvim/after/plugin"
+    state: directory
+    recurse: yes
+    mode: 0755
+
+- name: .vim directory
+  file:
+    path: "~/.vim"
+    state: directory
+    recurse: yes
+    mode: 0755
+
+- name: Create NeoVim autoload directory
+  file:
+    path: "~/.local/share/nvim/site/autoload"
+    state: directory
+    recurse: yes
+    mode: 0755
+
+- name: Install vim-plug
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: "{{ dotfiles_user_home }}/.local/share/nvim/site/autoload/plug.vim"
+
+- name: Symlink vimrc to nvim/init.vim
+  file:
+    src: "{{ dotfiles_home }}/roles/vim/files/config/nvim/init.vim"
+    dest: "~/.config/nvim/init.vim"
+    state: link
+
+- name: Symlink vimrc to config/nvim/lua/rsb
+  file:
+    src: "{{ dotfiles_home }}/roles/vim/files/config/nvim/lua/rsb"
+    dest: "~/.config/nvim/lua/rsb"
+    state: link
+
+- name: Symlink vimrc to config/nvim/plugins
+  file:
+    src: "{{ dotfiles_home }}/roles/vim/files/config/nvim/plugin/{{item}}"
+    dest: "~/.config/nvim/plugin/{{item}}"
+    state: link
+  with_items:
+    - sets.vim
+    - telescope.vim
+
+- name: Install plugins
+  command: /usr/local/bin/nvim +silent PlugInstall +visual +qall
+  when: vim_install_plugins
+
