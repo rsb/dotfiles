@@ -40,6 +40,12 @@
     dest: "~/.zsh"
     state: link
 
+- name: Link shell dir
+  file:
+    src: "{{dotfiles_home}}/roles/zsh/files/shell"
+    dest: "~/.shell"
+    state: link
+
 - name: Link zshrc
   file:
     src: "{{dotfiles_home}}/roles/zsh/files/zshrc"
