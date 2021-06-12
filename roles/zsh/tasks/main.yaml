@@ -1,0 +1,41 @@
+- name: Install zsh
+  apt:
+    name: zsh
+    state: present
+
+- name: Create ~/.cache/zsh
+  file:
+    path: "~/.cache/.zsh"
+    state: directory
+    recurse: yes
+    mode: 0755
+
+- name: Download starship installer
+  get_url:
+    url: https://starship.rs/install.sh
+    dest: /tmp/starship_installer.sh
+    mode: 0755
+
+- name: Execute starship installer
+  script:
+    cmd: /tmp/starship_installer.sh --force
+  become: yes
+  become_user: root
+  become_method: sudo
+
+- name: Remove starship installer
+  file:
+    path: /tmp/starship_installer.sh
+    state: absent
+
+- name: Link starship config
+  file:
+    src: "{{dotfiles_home}}/roles/zsh/files/starship.toml"
+    dest: "~/.config/starship.toml"
+    state: link
+
+- name: Link zshrc
+  file:
+    src: "{{dotfiles_home}}/roles/zsh/files/zshrc"
+    dest: "~/.zshrc"
+    state: link
