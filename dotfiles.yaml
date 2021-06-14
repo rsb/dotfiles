@@ -13,6 +13,9 @@
     - role: tmux
       tags:
         - tmux
+    - role: nerdfonts
+      tags:
+        - nerdfonts
     - role: alacritty
       tags:
         - alacritty

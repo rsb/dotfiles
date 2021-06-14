@@ -1,0 +1,14 @@
+nerdfonts_repo: "git@github.com:ryanoasis/nerd-fonts.git"
+nerdfonts_repo_dir: "{{dotfiles_user_home}}/workspace/rsb/install/nerdfonts"
+nerdfonts_install_dir: "{{dotfiles_user_home}}/.local/share/fonts"
+
+nerdfonts_version: "v2.1.0"
+nerdfonts_fonts:
+  - 3270
+  - Agave
+  - FiraCode
+  - FiraMono
+  - Go-Mono
+  - Inconsolata
+  - InconsolataGo
+  - InconsolataLGC

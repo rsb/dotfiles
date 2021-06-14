@@ -1,0 +1,16 @@
+- name: Ensure workspace src directory
+  file:
+    path: "{{ nerdfonts_repo_dir }}"
+    state: directory
+
+- name: Ensure Install Directory
+  file:
+    path: "{{ nerdfonts_install_dir }}"
+    state: directory
+
+- name: Get font
+  unarchive:
+    src: "https://github.com/ryanoasis/nerd-fonts/releases/download/{{nerdfonts_version}}/{{item}}.zip"
+    dest: "{{nerdfonts_install_dir}}"
+    remote_src: yes
+  with_items: "{{nerdfonts_fonts | default([])}}"

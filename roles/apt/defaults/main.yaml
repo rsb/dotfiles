@@ -31,7 +31,8 @@ packages:
   - xz-utils
   - zlib1g-dev
   - ripgrep
-
+  - fontconfig
+  - git
   # GUI
 
 
