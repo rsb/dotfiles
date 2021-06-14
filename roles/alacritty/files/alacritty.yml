@@ -1,0 +1,26 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 150
+    lines: 50
+  padding:
+    x: 10
+    y: 10
+  decorations: none
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+background_opacity: 0.95
+
+
+
+

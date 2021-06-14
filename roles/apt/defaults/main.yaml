@@ -8,6 +8,13 @@ packages:
   - htop
   - fzf
   - jq
+  - cmake
+  - pkg-config
+  - libfreetype6-dev
+  - libegl1-mesa-dev
+  - libxcb-shape0-dev
+  - libxcb-xfixes0-dev
+  - libxcb1-dev
   - libbz2-dev
   - libffi-dev
   - libffi-dev

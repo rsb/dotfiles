@@ -1,0 +1,4 @@
+alacritty_repo: "git@github.com:alacritty/alacritty.git"
+source_code_path: "{{dotfiles_user_home}}/workspace/rsb/install/alacritty"
+config_dir: "{{dotfiles_user_home}}/.config/alacritty"
+target_path: "target/release/alacritty"

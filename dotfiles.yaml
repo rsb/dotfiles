@@ -13,6 +13,9 @@
     - role: tmux
       tags:
         - tmux
+    - role: alacritty
+      tags:
+        - alacritty
     - role: asdf
       tags:
         - asdf
