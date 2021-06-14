@@ -21,6 +21,21 @@ scrolling:
 
 background_opacity: 0.95
 
+font:
+  normal:
+    family: Dank Mono
+    style: Regular
 
+  # The bold font face
+  bold:
+    family: Dank Mono
+    # Style can be specified to pick a specific face.
+    style: Bold
 
+  # The italic font face
+  italic:
+    family: Dank Mono
+    # Style can be specified to pick a specific face.
+    style: Italic
 
+  size: 14.0
