@@ -8,8 +8,16 @@ packages:
   - htop
   - fzf
   - jq
+  - ninja-build
+  - libtool
+  - libtool-bin
+  - autoconf
+  - automake
   - cmake
+  - g++
+  - make
   - pkg-config
+  - gettext
   - libfreetype6-dev
   - libegl1-mesa-dev
   - libxcb-shape0-dev
@@ -17,15 +25,12 @@ packages:
   - libxcb1-dev
   - libbz2-dev
   - libffi-dev
-  - libffi-dev
-  - liblzma-dev
   - liblzma-dev
   - libncurses5-dev
   - libreadline-dev
   - libsqlite3-dev
   - libssl-dev
   - llvm
-  - make
   - tk-dev
   - wget
   - xz-utils
@@ -33,6 +38,7 @@ packages:
   - ripgrep
   - fontconfig
   - git
+  - unzip
   # GUI
 
 

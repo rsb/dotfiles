@@ -18,6 +18,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-treesitter/playground'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
+  Plug 'glepnir/lspsaga.nvim'
+  Plug 'simrat39/symbols-outline.nvim'
+
   Plug 'vim-utils/vim-man'
   Plug 'mbbill/undotree'
   Plug 'tpope/vim-dispatch'
@@ -27,6 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
   Plug 'darrikonn/vim-gofmt'
   Plug 'preservim/nerdtree'
+  Plug 'dense-analysis/ale'
 
   " telescope requirements...
   Plug 'nvim-lua/popup.nvim'

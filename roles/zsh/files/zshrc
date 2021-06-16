@@ -28,3 +28,5 @@ fi
 if [ -f ~/.zshrc_local_after ]; then
   source ~/.zshrc_local_after
 fi
+
+alias luamake=/home/rsb/workspace/nvim/lua-language-server/3rd/luamake/luamake

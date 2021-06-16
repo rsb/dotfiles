@@ -1,4 +1,7 @@
 require("rsb.telescope")
+require("rsb.lsp")
+require("rsb.statusline")
+require("rsb.git-worktree")
 
 p = function(v)
   print(vim.inspect(v))
