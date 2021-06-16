@@ -1,6 +1,6 @@
 [user]
-  name = {{ full_name }}
-  email = {{ git_email }}
+  name  = Robert Scott-Buccleuch
+  email = 60840+rsb@users.noreply.github.com
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
@@ -8,7 +8,7 @@
   insteadOf = https://gitlab.com/
 
 [github]
-  user = {{ git_user }}
+  user = rsb
 
 [color]
   ui = auto

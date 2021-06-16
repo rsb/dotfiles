@@ -1,3 +1,17 @@
+set path+=**
+
+" Nice menu when typing `:find *.py`
+set wildmode=longest,list,full
+set wildmenu
+" Ignore files
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+
 call plug#begin('~/.vim/plugged')
   Plug 'gruvbox-community/gruvbox'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -10,7 +24,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-projectionist'
 
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'rust-lang/rust.vim'
+  Plug 'darrikonn/vim-gofmt'
   Plug 'preservim/nerdtree'
 
   " telescope requirements...
@@ -19,7 +34,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ThePrimeagen/git-worktree.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
-  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -31,9 +46,6 @@ let mapleader = " "
 
 " fast escape out of insert mode without having to stretch your pinky
 inoremap jj <esc>
-
-
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 
 fun! TrimWhitespace()
   let l:save = winsaveview()

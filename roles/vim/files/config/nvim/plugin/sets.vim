@@ -20,6 +20,7 @@ set noshowmode
 set completeopt=menuone,noinsert,noselect
 set signcolumn=yes
 set colorcolumn=80
+set encoding=UTF-8
 
 " Give more space for displaying messages
 set cmdheight=2
@@ -31,3 +32,9 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 set isfname+=@-@
+
+" -----------------------
+" DevIcon settings
+" -----------------------
+" loading the plugin
+let g:webdevicons_enable = 1
