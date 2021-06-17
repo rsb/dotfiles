@@ -15,6 +15,7 @@ packages:
   - automake
   - cmake
   - g++
+  - clangd-9
   - make
   - pkg-config
   - gettext

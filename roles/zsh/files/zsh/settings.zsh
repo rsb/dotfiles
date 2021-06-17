@@ -1,6 +1,6 @@
 
-if [ -d "${ASDF_DIR}/completions" ]; then
-  fpath=(${ASDF_DIR}/completions $fpath)
+if [ -d "~/.asdf/completions" ]; then
+  fpath=(~/.asdf/completions $fpath)
 fi
 
 # Basic auto/tab complete:
@@ -41,13 +41,11 @@ HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 
 
-
-
 source ~/.zplug/init.zsh
 
 export CLICOLOR=1
 export COMPLETION_WAITING_DOTS="true"
-
+export TERM=screen-256color
 unsetopt correct_all
 
 zplug "zsh-users/zsh-history-substring-search"

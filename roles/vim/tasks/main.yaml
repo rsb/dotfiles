@@ -90,6 +90,9 @@
   with_items:
     - sets.vim
     - telescope.vim
+    - lsp.vim
+    - coc.vim
+
 
 - name: Install plugins
   command: /usr/local/bin/nvim +silent PlugInstall +visual +qall
