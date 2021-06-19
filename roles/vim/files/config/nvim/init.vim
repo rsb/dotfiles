@@ -16,8 +16,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'gruvbox-community/gruvbox'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/nvim-compe'
+  "Plug 'neovim/nvim-lspconfig'
+  "Plug 'hrsh7th/nvim-compe'
   Plug 'glepnir/lspsaga.nvim'
   Plug 'simrat39/symbols-outline.nvim'
 
@@ -31,7 +31,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'rust-lang/rust.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  Plug 'darrikonn/vim-gofmt'
+  "Plug 'darrikonn/vim-gofmt'
   Plug 'preservim/nerdtree'
   Plug 'dense-analysis/ale'
 

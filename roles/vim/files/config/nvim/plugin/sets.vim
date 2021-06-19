@@ -33,6 +33,7 @@ set updatetime=50
 set shortmess+=c
 set isfname+=@-@
 
+set pyx=3
 " -----------------------
 " DevIcon settings
 " -----------------------
