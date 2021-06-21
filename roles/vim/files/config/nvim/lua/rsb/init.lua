@@ -1,5 +1,5 @@
 require("rsb.telescope")
--- require("rsb.lsp")
+require("rsb.lsp")
 require("rsb.statusline")
 require("rsb.git-worktree")
 

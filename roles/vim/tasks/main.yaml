@@ -90,8 +90,7 @@
   with_items:
     - sets.vim
     - telescope.vim
-    - coc.vim
-    - vim-closing-pairs.vim
+    - lsp.vim
 
 
 - name: Install plugins

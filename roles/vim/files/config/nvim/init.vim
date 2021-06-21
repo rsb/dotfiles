@@ -16,12 +16,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'gruvbox-community/gruvbox'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
-  "Plug 'neovim/nvim-lspconfig'
-  "Plug 'hrsh7th/nvim-compe'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
   Plug 'glepnir/lspsaga.nvim'
   Plug 'simrat39/symbols-outline.nvim'
 
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   Plug 'vim-utils/vim-man'
   Plug 'mbbill/undotree'
@@ -30,8 +30,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-projectionist'
 
   Plug 'rust-lang/rust.vim'
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  "Plug 'darrikonn/vim-gofmt'
+  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'darrikonn/vim-gofmt'
   Plug 'preservim/nerdtree'
   Plug 'dense-analysis/ale'
 
