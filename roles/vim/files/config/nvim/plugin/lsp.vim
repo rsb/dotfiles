@@ -16,7 +16,7 @@ nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.ut
 nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>vll :call LspLocationList()<CR>
 
-augroup THE_PRIMEAGEN_LSP
+augroup THE_RSB_LSP
     autocmd!
     autocmd! BufWrite,BufEnter,InsertLeave * :call LspLocationList()
 augroup END

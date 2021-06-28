@@ -33,7 +33,15 @@ set updatetime=50
 set shortmess+=c
 set isfname+=@-@
 
+" Splits
+set splitbelow        " open a new vertical split below
+set splitright        " open a new horizontal split on the right
+set fillchars=vert:│
+
 set pyx=3
+
+" Use the system register
+set clipboard^=unnamed
 " -----------------------
 " DevIcon settings
 " -----------------------

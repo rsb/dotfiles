@@ -91,6 +91,7 @@
     - sets.vim
     - telescope.vim
     - lsp.vim
+    - nerdtree.vim
 
 
 - name: Install plugins
