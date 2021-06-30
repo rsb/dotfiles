@@ -42,8 +42,12 @@ set pyx=3
 
 " Use the system register
 set clipboard^=unnamed
+
+
+
 " -----------------------
 " DevIcon settings
 " -----------------------
 " loading the plugin
 let g:webdevicons_enable = 1
+
