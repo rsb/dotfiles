@@ -30,3 +30,7 @@ if [ -f ~/.zshrc_local_after ]; then
 fi
 
 alias luamake=/home/rsb/workspace/nvim/lua-language-server/3rd/luamake/luamake
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

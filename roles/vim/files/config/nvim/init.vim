@@ -24,7 +24,7 @@ endfunction
 call plug#begin('~/.vim/plugged')
 "  call s:local_plug('cyclist.vim')
 
-" Plug 'gruvbox-community/gruvbox'
+  "Plug 'gruvbox-community/gruvbox'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
   Plug 'neovim/nvim-lspconfig'
@@ -53,9 +53,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-  Plug 'hoob3rt/lualine.nvim'
-  Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'ryanoasis/vim-devicons'
+
   Plug 'wellle/targets.vim'
   Plug 'junegunn/vim-peekaboo'
 
@@ -67,8 +65,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-unimpaired'
   Plug 'alvan/vim-closetag'
   Plug 'machakann/vim-sandwich'
-  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 colorscheme nord

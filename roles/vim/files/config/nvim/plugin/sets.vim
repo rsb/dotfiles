@@ -39,6 +39,7 @@ set splitright        " open a new horizontal split on the right
 set fillchars=vert:│
 
 set pyx=3
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 
 " Use the system register
 set clipboard^=unnamed
@@ -50,4 +51,4 @@ set clipboard^=unnamed
 " -----------------------
 " loading the plugin
 let g:webdevicons_enable = 1
-
+let g:webdevicons_enable_airline_statusline = 1
