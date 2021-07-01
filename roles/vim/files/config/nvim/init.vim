@@ -55,11 +55,10 @@ call plug#begin('~/.vim/plugged')
 
 
   Plug 'wellle/targets.vim'
-  Plug 'junegunn/vim-peekaboo'
+  "Plug 'junegunn/vim-peekaboo'
 
   Plug 'andymass/vim-matchup'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-unimpaired'
@@ -124,3 +123,4 @@ nnoremap <A-l> <C-w>l
 
 
 let g:closetag_filenames = '*.html,*.xhtml,*.jsx,*.tsx'
+let g:peekaboo_prefix = " "
